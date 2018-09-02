@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>右下角广告</title>
+	<style type="text/css">
+		.main{
+			width: 1000px;
+			height: 1500px;
+			margin: 0 auto;
+			background: #ccc;
+		}
+		.rightAd{
+			width: 350px;
+			height: 300px;
+			position: fixed;
+			right: 0;
+			bottom: 0;
+		}
+		.rightAd1{
+			width: 350px;
+			height: 300px;
+			position: fixed;
+			right: 0;
+			bottom: 300px;
+		}
+		.pic a#closeBtn
+		{
+			background: url(icon.jpg) no-repeat -399px -19px;
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+		}
+
+		.pic a#closeBtn:hover{
+			background-position: -371px -19px;
+		}
+
+		.pic .ad{
+			position: absolute;
+			color: #fff;
+			margin-top: 5px;
+			margin-left: 1px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var TipBox = document.getElementById('tipCon');
+			var CloseBtn = document.getElementById('closeBtn');
+			CloseBtn.onclick = function(){
+				TipBox.style.display = 'none';
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div class="main"><img src="icon.jpg"></div>
+	<div class="rightAd" id="tipCon">
+		<div class="pic">
+			<p class="ad"><b>广告</b></p>
+			<a href="http://www.ofo.so" target="blank"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535884931794&di=9e25af38c1f9b55e7bb5eef69239c0b4&imgtype=0&src=http%3A%2F%2Ffile.digitaling.com%2FeImg%2Fuimages%2F20161229%2F1482978504878942.gif"></a><a href="javascript:void(0);" id="closeBtn">
+		</div>
+	</div>
+</body>
+</html>
